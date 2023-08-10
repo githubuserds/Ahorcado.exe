@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Icon Window -->
+     <link rel="shortcut icon" href="img/iconWindow.png">
+
+     <!-- Title Window -->
+     <title>El Ahorcado</title>
+
+     <!-- Typography Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+
+     <!-- Icons Library -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- bootstrap 5 library css -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!-- Scripts: eventsWindows -->
+     <script src="js/eventsWindows.js"></script>
+
+     <!-- Scripts: messageGames -->
+     <script src="js/eventsWindows.js"></script>
+
+
+     <!-- Styles css -->
+     <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+     <header class="navbar contianer-fluid text-white px-4 py-2 bg-black">
+          <div class="navbar-brand p-0">
+               <a href="https://github.com/githubuserds/Ahorcado.exe.git" target="_black" class="h2 text-decoration-none text-white">Ahorcado</a>
+          </div>
+
+          <div class="contianer-fluid">
+
+               <button class="btn btn-info text-white fw-bold ms-3 border-1 border-white rounded" id="jugar" title="Iniciar Partida">
+                    <i class="fa-solid fa-play"></i>
+               </button>
+
+               <button class="btn btn-success fw-bold ms-3 border-1 border-white rounded" title="Nuevo Juego"
+                    onclick="newGame();">
+                    <i class="fa-solid fa-repeat"></i>
+               </button>
+
+               <button class="btn btn-warning text-white fw-bold ms-3 border-1 border-white rounded" title="Regresar del Sitio"
+                    onclick="returnGame();">
+                    <i class="fa-solid fa-arrow-left"></i>
+               </button>
+
+               <button class="btn btn-danger fw-bold ms-3 border-1 border-white rounded" title="Cerrar Ventana"
+                    onclick="closeGame();">
+                    <i class="fa-solid fa-xmark"></i>
+               </button>
+          </div>
+     </header>
+
+     <main class="container mt-3">
+
+          <section class="w-100 d-block text-center">
+               <div class="w-100">
+                    <div class="m-auto">
+                         <div class="w-100 text-center">
+                              <img class="img-fluid border-1 rounded w_img" id="imagen"
+                                   src="img/animations/layer_00.jpg" alt="Loading " />
+                         </div>
+
+                         <div class="w-100 mt-3">
+                              <p class="fs-4 text-white text-uppercase" id="palabra_a_adivinar">
+                              </pc>
+                         </div>
+                    </div>
+
+               </div>
+
+               <div class="mt-3 flex-grap gap-3" id="letras">
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">a</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">b</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">c</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">d</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">e</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">f</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">g</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">h</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">i</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">j</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">k</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">l</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">m</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">n</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">ñ</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">o</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">p</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">q</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">r</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">s</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">t</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">u</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">v</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">w</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">x</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">y</button>
+                    <button class="btn btn-primary text-white text-uppercase border border-1 rounded mb-2 btn_txt">z</button>
+
+               </div>
+          </section>
+     </main>
+
+
+     <!-- Script Functionality Game -->
+     <script type="text/javascript" src="js/functionalityGame.js"></script>
+
+</body>
+
+</html>

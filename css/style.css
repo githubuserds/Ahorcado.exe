@@ -1,0 +1,38 @@
+* {
+     font-family: 'Carter One', Arial, Helvetica, sans-serif;
+}
+
+body {
+     background-image: url(../img/background.png);
+     background-size: cover;
+     background-attachment: fixed;
+}
+
+header{
+     background-color: #030712 !important;
+}
+
+a:focus{
+     outline: none;
+}
+
+#palabra_a_adivinar span{
+     vertical-align: bottom;
+     border-bottom: 3px solid white;
+     width: 30px;
+     text-align: center;
+     margin-right: 6px;
+     display: inline-block; 
+
+}
+
+/* Boostrap 5 */
+
+.btn_txt{
+     height: 38px !important;
+     width: 38px !important;
+}
+
+.w_img{
+     width: 65%;
+}
